@@ -3,7 +3,7 @@ Paqueterías de Python requeridas:
 - pandas
 - numpy
 - plotly
-- streamlit
+- streamlit             
 Ejecutar el siguiente comando para iniciar el programa:           
 ```sh
 streamlit run ▶️_Inicio.py
