@@ -1,4 +1,9 @@
 #Page2
+pip install requests
+pip install pandas
+pip install numpy
+pip install plotly
+
 import requests
 import pandas as pd
 import datetime as dt

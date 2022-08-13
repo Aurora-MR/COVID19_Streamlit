@@ -1,0 +1,4 @@
+requests==2.25.1
+pandas==1.4.3
+numpy==1.23.0
+plotly==5.9.0
