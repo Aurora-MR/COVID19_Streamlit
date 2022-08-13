@@ -40,116 +40,16 @@ df_covid19['day']=df_covid19['date'].dt.day
 #Fecha1
 col1.write('Fecha')
 with col3:
-    st.write('Fecha inicial:')
-    year = np.arange(2020, df_covid19['date'].max().year+1)
-    year1 = st.selectbox('Año1', year)
-    if year1 < df_covid19['date'].max().year:
-        month = np.arange(1,13).tolist()
-        month1 = st.selectbox('Mes1', month) 
-        for n in range(7):
-            o = 2*n+1
-            e = 2*n
-            if month1 == o:
-                if o < 9:
-                   day = np.arange(1,32).tolist()
-                else:
-                   day = np.arange(1,31).tolist()
-            elif month1 == e:
-                if e > 2 and e < 8:
-                   day = np.arange(1,31).tolist()
-                elif e >= 8:
-                   day = np.arange(1,32).tolist()
-                else:
-                   day = np.arange(1,29).tolist()  
-        day1 = st.selectbox('Día1', day)
-    else: 
-        month = np.arange(1,df_covid19['date'].max().month+1).tolist()
-        month1 = st.selectbox('Mes1', month) 
-        for n in range(7):
-            o = 2*n+1
-            e = 2*n
-            if month1 == df_covid19['date'].max().month:
-                day = np.arange(1, df_covid19['date'].max().day+1).tolist()
-            elif month1 == o:
-                if o < 9:
-                   day = np.arange(1,32).tolist()
-                else:
-                   day = np.arange(1,31).tolist()
-            elif month1 == e:
-                if e > 2 and e < 8:
-                   day = np.arange(1,31).tolist()
-                elif e >= 8:
-                   day = np.arange(1,32).tolist()
-                else:
-                   day = np.arange(1,29).tolist()  
-        day1 = st.selectbox('Día1', day)
-    #Fecha 1
-    if month1 not in (10,11,12):
-        if day1 in range(1,10):
-            fecha1 = str(year1) + '-0' + str(month1) + '-0' + str(day1)
-        else:
-            fecha1 = str(year1) + '-0' + str(month1) + '-' + str(day1)
-    else:
-        if day1 in range(1,10):
-            fecha1 = str(year1) + '-' + str(month1) + '-0' + str(day1)
-        else:
-            fecha1 = str(year1) + '-' + str(month1) + '-' + str(day1)
+    fecha1 = st.date_input('Fecha inicial', value=df_covid19['date'].min(), 
+                                            min_value=df_covid19['date'].min(), 
+                                            max_value=df_covid19['date'].max())
 #Fecha2
 with col4:
-    st.write('Fecha final:')
-    year = np.arange(2020, df_covid19['date'].max().year+1)
-    year2 = st.selectbox('Año2', year)
-    if year2 < df_covid19['date'].max().year:
-        month = np.arange(1,13).tolist()
-        month2 = st.selectbox('Mes2', month) 
-        for n in range(7):
-            o = 2*n+1
-            e = 2*n
-            if month2 == o:
-                if o < 9:
-                   day = np.arange(1,32).tolist()
-                else:
-                   day = np.arange(1,31).tolist()
-            elif month2 == e:
-                if e > 2 and e < 8:
-                   day = np.arange(1,31).tolist()
-                elif e >= 8:
-                   day = np.arange(1,32).tolist()
-                else:
-                   day = np.arange(1,29).tolist()  
-        day2 = st.selectbox('Día2', day)
-    else: 
-        month = np.arange(1,df_covid19['date'].max().month+1).tolist()
-        month2 = st.selectbox('Mes2', month) 
-        for n in range(7):
-            o = 2*n+1
-            e = 2*n
-            if month2 == df_covid19['date'].max().month:
-                day = np.arange(1, df_covid19['date'].max().day+1).tolist()
-            elif month2 == o:
-                if o < 9:
-                   day = np.arange(1,32).tolist()
-                else:
-                   day = np.arange(1,31).tolist()
-            elif month2 == e:
-                if e > 2 and e < 8:
-                   day = np.arange(1,31).tolist()
-                elif e >= 8:
-                   day = np.arange(1,32).tolist()
-                else:
-                   day = np.arange(1,29).tolist()  
-        day2 = st.selectbox('Día2', day)
-    #Fecha 2
-    if month2 not in (10,11,12):
-        if day2 in range(1,10):
-            fecha2 = str(year2) + '-0' + str(month2) + '-0' + str(day2)
-        else:
-            fecha2 = str(year2) + '-0' + str(month2) + '-' + str(day2)
-    else:
-        if day2 in range(1,10):
-            fecha2 = str(year2) + '-' + str(month2) + '-0' + str(day2)
-        else:
-            fecha2 = str(year2) + '-' + str(month2) + '-' + str(day2)
+    fecha2 = st.date_input('Fecha inicial', value=df_covid19['date'].max(), 
+                                            min_value=df_covid19['date'].min(), 
+                                            max_value=df_covid19['date'].max())
+fecha1 = str(fecha1)
+fecha2 = str(fecha2)
 #---------------------------------------------------------------------------
 
 # Estados con mayor ocupación hospitalaria por COVID 
