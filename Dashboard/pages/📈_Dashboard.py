@@ -1,16 +1,16 @@
 #Dashboard
-import sys
+# import sys #local
 import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 import plotly.express as px
-sys.path.append(r'/home/aury/Henry/COVID19_Streamlit_copy/COVID19_Timeseries/COVID_data')
+# sys.path.append(r'/my/local/directory') #local
 from Data_relations import *
 
 st.set_page_config(layout='wide')
-with open("Henry/COVID19_Streamlit_copy/COVID19_Timeseries/COVID_data/Frontend/style.css") as style:
+with open("https://github.com/Aurora-MR/COVID19_USA/raw/main/COVID_data/Frontend/style.css") as style:
     st.markdown(f'<style>{style.read()}</style>', unsafe_allow_html=True)
 st.write('<h1 style="text-align:center">COVID-19</h1>', unsafe_allow_html=True)
 
