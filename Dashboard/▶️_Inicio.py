@@ -16,4 +16,4 @@ st.write(
 		"""
         - Este trabajo esta realizado y actualizado según los datos proporcionados por el gobierno de Estados unidos: https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh.
  		- Todos los datos se encuentran expresados de forma acumulativa durante el periodo especificado.
- 		"""
+ 		""")
