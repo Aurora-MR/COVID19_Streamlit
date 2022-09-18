@@ -3,4 +3,4 @@ pandas==1.4.3
 numpy==1.23.0
 plotly==5.9.0
 matplotlib
-httpimport
+git+https://github.com/polinom/knockout
