@@ -5,6 +5,6 @@ setup(name="Data relations",
     description="Obtención de datos", 
     author="Aurora Martínez",
     author_email='aurorarivas1606@gmail.com',
-    packages=['Data_relations'],
+    packages=['COVID_data'],
     install_requires=['requests', 'pandas', 'numpy'],
 )

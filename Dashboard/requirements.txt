@@ -3,4 +3,4 @@ pandas==1.4.3
 numpy==1.23.0
 plotly==5.9.0
 matplotlib
-git+https://github.com/Aurora-MR/COVID19_USA/tree/dr/COVID_data
+git+https://github.com/Aurora-MR/COVID19_USA.git
