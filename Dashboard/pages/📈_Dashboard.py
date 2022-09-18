@@ -1,4 +1,5 @@
 #Dashboard
+import requests
 import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -8,7 +9,8 @@ import plotly.express as px
 from Data_relations import *
 
 st.set_page_config(layout='wide')
-with open("https://github.com/Aurora-MR/COVID19_USA/raw/main/Covid_data/Frontend/style.css") as style:
+r = requests.get('https://github.com/Aurora-MR/COVID19_USA/raw/main/Covid_data/Frontend/style.css')
+with open(r) as style:
     st.markdown(f'<style>{style.read()}</style>', unsafe_allow_html=True)
 st.write('<h1 style="text-align:center">COVID-19</h1>', unsafe_allow_html=True)
 
