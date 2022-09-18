@@ -5,7 +5,7 @@ import numpy as np
 
 #Obtención de datos
 df_covid19 = pd.read_csv('https://healthdata.gov/api/views/g62h-syeh/rows.csv')
-states = pd.read_csv('https://github.com/Aurora-MR/COVID19_USA/raw/main/COVID_data/states.csv')
+states = pd.read_csv('https://github.com/Aurora-MR/COVID19_USA/raw/main/Covid_data/states.csv')
 #Merge
 df_covid19 = pd.merge(df_covid19, states, on='state', how='left')
 
