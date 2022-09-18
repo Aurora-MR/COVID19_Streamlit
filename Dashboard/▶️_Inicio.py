@@ -1,6 +1,6 @@
 #Page1
 import streamlit as st 
-
+st.set_page_config(layout='centered', initial_sidebar_state='collapsed')
 st.markdown('# Dashboard sobre la pandemia ocasionada por COVID-19')
 st.markdown('## Introducción')
 st.write(
@@ -12,7 +12,8 @@ st.write(
 st.markdown('## Objetivo')
 st.markdown('Brindar información que sugiera en base a los datos recolectados, como organizar los recursos hospitalarios para prevenir que lo ocurrido durante la pandemia COVID-19 suceda de vuelta.')
 st.markdown('## Consideraciones')
-# st.write('''
-#          - Este trabajo esta realizado y actualizado según los datos proporcionados por el gobierno de Estados unidos: https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh.
-# 		- Todos los datos se encuentran expresados de forma acumulativa durante el periodo especificado.
-# 		'''
+st.write(
+		"""
+        - Este trabajo esta realizado y actualizado según los datos proporcionados por el gobierno de Estados unidos: https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh.
+ 		- Todos los datos se encuentran expresados de forma acumulativa durante el periodo especificado.
+ 		"""
