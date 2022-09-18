@@ -10,8 +10,8 @@ from Data_relations import *
 
 st.set_page_config(layout='wide', initial_sidebar_state='collapsed')
 r = urlopen('https://github.com/Aurora-MR/COVID19_USA/raw/main/Covid_data/Frontend/style.css')
-st.write(f'<style>{r.read()}</style>', unsafe_allow_html=True)
-st.write('<h1 style="text-align:center">COVID-19</h1>', unsafe_allow_html=True)
+st.markdown(f'<style>{r.read()}</style>', unsafe_allow_html=True)
+st.markdown('<h1 style="text-align:center">COVID-19</h1>', unsafe_allow_html=True)
 
 col1_1, col1_2 = st.columns([2, 5])
 col2_1, col2_2, col2_3 = st.columns([1, 1, 5])
