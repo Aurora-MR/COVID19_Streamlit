@@ -1,12 +1,14 @@
 #Dashboard
-# import sys #local
+import sys
 import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 import plotly.express as px
-# sys.path.append(r'/my/local/directory') #local
+# sys.path.append('/my/local/directory') #local
+from knockout import urlimport
+sys.path.insert(0, 'https://github.com/Aurora-MR/COVID19_USA/blob/main/COVID_data/')
 from Data_relations import *
 
 st.set_page_config(layout='wide')

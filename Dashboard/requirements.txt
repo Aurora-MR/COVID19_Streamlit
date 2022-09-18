@@ -3,4 +3,4 @@ pandas==1.4.3
 numpy==1.23.0
 plotly==5.9.0
 matplotlib
-https://github.com/Aurora-MR/COVID19_USA/raw/main/COVID_data/Data_relations.py
+httpimport
