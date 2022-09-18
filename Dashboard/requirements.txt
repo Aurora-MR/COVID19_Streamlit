@@ -1,3 +1,5 @@
+requests
+pandas
+numpy
 plotly
 matplotlib
-git+https://github.com/Aurora-MR/COVID19_USA.git

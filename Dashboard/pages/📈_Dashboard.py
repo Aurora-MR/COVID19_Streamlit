@@ -10,8 +10,8 @@ import plotly.express as px
 from Data_relations import *
 
 st.set_page_config(layout='wide')
-# with open("https://raw.githubusercontent.com/Aurora-MR/COVID19_USA/main/Data_relations/Frontend/style.css") as style:
-#     st.markdown(f'<style>{style.read()}</style>', unsafe_allow_html=True)
+with open("https://raw.githubusercontent.com/Aurora-MR/COVID19_USA/main/Covid_data/Frontend/style.css") as style:
+    st.markdown(f'<style>{style.read()}</style>', unsafe_allow_html=True)
 st.write('<h1 style="text-align:center">COVID-19</h1>', unsafe_allow_html=True)
 
 col1_1, col1_2 = st.columns([2, 5])
