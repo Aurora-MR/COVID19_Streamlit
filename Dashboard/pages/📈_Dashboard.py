@@ -1,5 +1,5 @@
 #Dashboard
-import requests
+from urllib.request import urlopen
 import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -9,7 +9,7 @@ import plotly.express as px
 from Data_relations import *
 
 st.set_page_config(layout='wide')
-r = requests.get('https://github.com/Aurora-MR/COVID19_USA/raw/main/Covid_data/Frontend/style.css')
+r = urlopen('https://github.com/Aurora-MR/COVID19_USA/raw/main/Covid_data/Frontend/style.css')
 st.markdown(f'<style>{r.read()}</style>', unsafe_allow_html=True)
 st.write('<h1 style="text-align:center">COVID-19</h1>', unsafe_allow_html=True)
 
