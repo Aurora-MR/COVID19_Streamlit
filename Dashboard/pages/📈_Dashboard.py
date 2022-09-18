@@ -10,7 +10,8 @@ from Data_relations import *
 
 st.set_page_config(layout='wide', initial_sidebar_state='collapsed')
 r = urlopen('https://github.com/Aurora-MR/COVID19_USA/raw/main/Covid_data/Frontend/style.css')
-st.markdown(f'<style>{r.read()}</style>', unsafe_allow_html=True)
+r = r.read().decode('utf-8')
+st.markdown(f'<style>{r}</style>', unsafe_allow_html=True)
 st.markdown('<h1 style="text-align:center">COVID-19</h1>', unsafe_allow_html=True)
 
 col1_1, col1_2 = st.columns([2, 5])
@@ -83,28 +84,6 @@ except ValueError:
         str1 = 'figpa'+str(i+1)
         globals()[str1] = ''
 
-#Pyplot
-    # figpa1 = px.pie(values=[pie_ta[0], pie_ra[0]], 
-    # title=str(df_covid19_icu_covid_a['name_state'].iloc[0]),width=100, height=100,
-    # color_discrete_sequence=['#68797F', '#000064'])
-    # figpa1.update_layout(hoverlabel=dict(bgcolor='#68797F', font_size=16))
-    # figpa2 = px.pie(values=[pie_ta[1], pie_ra[1]], 
-    # title=str(df_covid19_icu_covid_a['name_state'].iloc[1]), width=100, height=100,
-    # color_discrete_sequence=['#68797F', '#000064'])
-    # figpa2.update_layout(hoverlabel=dict(bgcolor='#68797F', font_size=16))
-    # figpa3 = px.pie(values=[pie_ta[2], pie_ra[2]], 
-    # title=str(df_covid19_icu_covid_a['name_state'].iloc[2]), width=100, height=100,
-    # color_discrete_sequence=['#68797F', '#000064'])
-    # figpa3.update_layout(hoverlabel=dict(bgcolor='#68797F', font_size=16))
-    # figpa4 = px.pie(values=[pie_ta[3], pie_ra[3]], 
-    # title=str(df_covid19_icu_covid_a['name_state'].iloc[3]), width=100, height=100,
-    # color_discrete_sequence=['#68797F', '#000064'])
-    # figpa4.update_layout(hoverlabel=dict(bgcolor='#68797F', font_size=16))
-    # figpa5 = px.pie(values=[pie_ta[4], pie_ra[4]], 
-    # title=str(df_covid19_icu_covid_a['name_state'].iloc[4]), width=100, height=100,
-    # color_discrete_sequence=['#68797F', '#000064'])
-    # figpa5.update_layout(hoverlabel=dict(bgcolor='#68797F', font_size=16))
-
 #layout
 col3_3.write('Adultos')
 col4_3.write(figpa1)
@@ -133,28 +112,6 @@ except ValueError:
     for i in range(5):
         str1 = 'figpp'+str(i+1)
         globals()[str1] = ''
-
-#Pyplot
-    # figpp1 = px.pie(values=[pie_tp[0], pie_rp[0]], 
-    #           title=str(df_covid19_icu_covid_p['name_state'].iloc[0]), width=100, height=100,
-    #           color_discrete_sequence=['#68797F', '#000064'])
-    # figpp1.update_layout(hoverlabel=dict(bgcolor='#68797F', font_size=16))
-    # figpp2 = px.pie(values=[pie_tp[1], pie_rp[1]], 
-    #           title=str(df_covid19_icu_covid_p['name_state'].iloc[1]), width=100, height=100,
-    #           color_discrete_sequence=['#68797F', '#000064'])
-    # figpp2.update_layout(hoverlabel=dict(bgcolor='#68797F', font_size=16))
-    # figpp3 = px.pie(values=[pie_tp[2], pie_rp[2]], 
-    #           title=str(df_covid19_icu_covid_p['name_state'].iloc[2]), width=100, height=100,
-    #           color_discrete_sequence=['#68797F', '#000064'])
-    # figpp3.update_layout(hoverlabel=dict(bgcolor='#68797F', font_size=16))
-    # figpp4 = px.pie(values=[pie_tp[3], pie_rp[3]], 
-    #           title=str(df_covid19_icu_covid_p['name_state'].iloc[3]), width=100, height=100,
-    #           color_discrete_sequence=['#68797F', '#000064'])
-    # figpp4.update_layout(hoverlabel=dict(bgcolor='#68797F', font_size=16))
-    # figpp5 = px.pie(values=[pie_tp[4], pie_rp[4]], 
-    #           title=str(df_covid19_icu_covid_p['name_state'].iloc[4]), width=100, height=100,
-    #           color_discrete_sequence=['#68797F', '#000064'])
-    # figpp5.update_layout(hoverlabel=dict(bgcolor='#68797F', font_size=16))
 
 #layout
 col5_1, col5_2, col5_3 = st.columns([1, 1, 5])
