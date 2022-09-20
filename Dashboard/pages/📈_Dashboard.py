@@ -12,7 +12,7 @@ st.set_page_config(layout='wide', initial_sidebar_state='collapsed')
 r = urlopen('https://github.com/Aurora-MR/COVID19_USA/raw/main/Covid_data/Frontend/styled.css')
 r = r.read().decode('utf-8')
 st.markdown(f'<style>{r}</style>', unsafe_allow_html=True)
-st.markdown('<div align="left"><a href="https://aurora-mr-covid19-usa-dashboard-inicio-h7fwid.streamlitapp.com"><img src="https://github.com/Aurora-MR/COVID19_USA/raw/main/src/iniciob.png"></a></div>', unsafe_allow_html=True)
+st.markdown('<div align="left"><a href="https://aurora-mr-covid19-usa-dashboard-inicio-h7fwid.streamlitapp.com", target="_self"><img src="https://github.com/Aurora-MR/COVID19_USA/raw/main/src/iniciob.png"></a></div>', unsafe_allow_html=True)
 st.markdown('<h1 style="text-align:center">Dashboard COVID-19(USA)</h1>', unsafe_allow_html=True)
 
 col1_1, col1_2 = st.columns([2, 5])
