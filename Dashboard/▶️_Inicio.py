@@ -1,4 +1,5 @@
 #Page1
+from urllib.request import urlopen
 import streamlit as st 
 st.set_page_config(layout='wide', initial_sidebar_state='collapsed')
 r = urlopen('https://github.com/Aurora-MR/COVID19_USA/raw/main/Covid_data/Frontend/stylei.css')
