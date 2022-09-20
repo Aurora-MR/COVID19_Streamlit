@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(layout='wide', initial_sidebar_state='collapsed')
 r = urlopen('https://github.com/Aurora-MR/COVID19_USA/raw/main/Covid_data/Frontend/stylei.css')
 r = r.read().decode('utf-8')
-st.markdown(f'<style>{r.read()}</style>', unsafe_allow_html=True)
+st.markdown(f'<style>{r}</style>', unsafe_allow_html=True)
 st.markdown('<div align="right"><a href="https://aurora-mr-covid19-usa-dashboard-inicio-h7fwid.streamlitapp.com/Dashboard"><img src="https://github.com/Aurora-MR/COVID19_USA/raw/main/src/dashboardb.png"></a></div>', unsafe_allow_html=True)
 st.markdown('# COVID-19(USA)')
 st.markdown('## Introducción')
