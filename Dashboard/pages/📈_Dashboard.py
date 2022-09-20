@@ -9,16 +9,28 @@ import plotly.express as px
 from Data_relations import *
 
 st.set_page_config(layout='wide', initial_sidebar_state='collapsed')
-r = urlopen('https://github.com/Aurora-MR/COVID19_USA/raw/main/Covid_data/Frontend/style.css')
+r = urlopen('https://github.com/Aurora-MR/COVID19_USA/raw/main/Covid_data/Frontend/styled.css')
 r = r.read().decode('utf-8')
 st.markdown(f'<style>{r}</style>', unsafe_allow_html=True)
-st.markdown('<h1 style="text-align:center">COVID-19</h1>', unsafe_allow_html=True)
+st.markdown('<div align="left"><a href="https://aurora-mr-covid19-usa-dashboard-inicio-h7fwid.streamlitapp.com"><img src="https://github.com/Aurora-MR/COVID19_USA/raw/main/src/iniciob.png"></a></div>', unsafe_allow_html=True)
+st.markdown('<h1 style="text-align:center">Dashboard COVID-19(USA)</h1>', unsafe_allow_html=True)
 
 col1_1, col1_2 = st.columns([2, 5])
 col2_1, col2_2, col2_3 = st.columns([1, 1, 5])
 col3_1, col3_2, col3_3 = st.columns([1, 1, 5])
 col4_1, col4_2, col4_3, col4_4, col4_5, col4_6, col4_7 = st.columns(7)
 col1_1.write('##### Periodo de estudio')
+
+@st.experimental_memo(ttl=86400)
+def datar(df):
+    return df
+
+df_covid19 = datar(df_covid19)
+df_covid19_occup = datar(df_covid19_occup)
+df_covid19_icu_covid = datar(df_covid19_icu_covid)
+df_covid19_rel_deaths_year = datar(df_covid19_rel_deaths_year)
+df_covid19_confirmed = datar(df_covid19_confirmed)
+df_covid19_confirmed_state = datar(df_covid19_confirmed_state)
 
 #Fecha1
 with col2_1:
@@ -35,7 +47,7 @@ fecha1 = str(fechai)
 fecha2 = str(fechaf)
 #---------------------------------------------------------------------------
 #Porcentaje COVID-19 positivos en cuidados intensivos por estado
-col1_2.write('<h5 style="text-align:center">Ocupación hospitalaria en el área de cuidados intensivos</h5>', unsafe_allow_html=True)
+col1_2.write('<h5 style="text-align:center">Ocupación hospitalaria en el área de cuidados intensivos por COVID19</h5>', unsafe_allow_html=True)
 df_covid19_icu_covid = df_covid19_icu_covid[(df_covid19_icu_covid['date'] >= fecha1) & (df_covid19_icu_covid['date'] <= fecha2)]
 df_covid19_icu_covid = df_covid19_icu_covid.groupby(['name_state', 'state']).agg(np.sum)
 df_covid19_icu_covid['percent_icu_beds_covid_adult'] = df_covid19_icu_covid.apply(lambda r: r['staffed_icu_adult_patients_confirmed_covid']/r['total_staffed_adult_icu_beds'], axis=1)
@@ -114,7 +126,8 @@ except ValueError:
         globals()[str1] = ''
 
 #layout
-col5_1, col5_2, col5_3 = st.columns([1, 1, 5])
+col5_1, col5_2, col5
+_3 = st.columns([1, 1, 5])
 col5_3.write('Área pediátrica')
 col6_1, col6_2, col6_3, col6_4, col6_5, col6_6, col6_7 = st.columns(7)
 col6_3.write(figpp1)
@@ -204,7 +217,7 @@ fig.add_trace(go.Scatter(x=df_covid19_confirmed['date'],
                          y=df_covid19_confirmed['total_pediatric_patients_hospitalized_confirmed_covid'], 
                          name='Pacientes pediátricos', mode='lines', line=dict(color='#00759D')))
 
-fig.update_layout(title=f'Hospitalizadas por COVID-19 entre {fecha1} y {fecha2}',
+fig.update_layout(title=f'Hospitalizados por COVID-19 entre {fecha1} y {fecha2}',
 xaxis=dict(title='Fecha', gridcolor='rgba(0,0,0,0)', griddash='dash', ticks='outside',
 tickcolor='#68797F'),
 yaxis=dict(title='Cantidad de hospitalizados', gridcolor='#68797F', griddash='dash', ticks='outside',

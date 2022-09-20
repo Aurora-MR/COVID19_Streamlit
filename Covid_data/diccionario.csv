@@ -1,0 +1,14 @@
+Ocupación hospitalaria en el área de cuidados intensivos por COVID19,
+total_staffed_adult_icu_beds,Reporta el número total de pacientes hospitalizados en el área de cuidados intensivos en ese estado.
+staffed_icu_adult_patients_confirmed_covid,Reporta el número de pacientes adultos hospitalizados en el área de cuidados intensivos que han sido confirmados con COVID19 en ese estado.
+total_staffed_pediatric_icu_beds,Reporta el número total de camas en el área pediátrica de cuidados intensivos.
+staffed_icu_pediatric_patients_confirmed_covid,Reporta el número de pacientes pediátricos hospitalizados en el área de cuidados intensivos que han sido confirmados con COVID19 en ese estado.
+,
+Ocupación hospitalaria por COVID-19,
+inpatient_beds_used_covid,Reporta el número de pacientes actualmente hospitalizados que han sido confirmados con COVID19 o se tiene sospecha de contagio en ese estado.
+total_adult_patients_hospitalized_confirmed_covid,Reporta el número de pacientes adultos actualmente hospitalizados que han sido confirmados con COVID19 en ese estado. Incluye a aquellos en camas de observación.
+total_pediatric_patients_hospitalized_confirmed_covid,Reporta el número de pacientes pediátricos actualmente hospitalizados que han sido confirmados con COVID19 en ese estado. Incluye a aquellos en camas de observación.
+,
+Cantidad de decesos por COVID-19 vs falta de personal medico,
+deaths_covid,Número de pacientes que se sospecha o se tiene certeza muerieron por COVID19 en ese estado.
+critical_staffing_shortage_today_yes,Cantidad de hospitales que reportan escasez de personal medico al día en ese estado.
