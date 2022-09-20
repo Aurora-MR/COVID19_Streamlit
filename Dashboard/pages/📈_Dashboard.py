@@ -126,8 +126,7 @@ except ValueError:
         globals()[str1] = ''
 
 #layout
-col5_1, col5_2, col5
-_3 = st.columns([1, 1, 5])
+col5_1, col5_2, col5_3 = st.columns([1, 1, 5])
 col5_3.write('Área pediátrica')
 col6_1, col6_2, col6_3, col6_4, col6_5, col6_6, col6_7 = st.columns(7)
 col6_3.write(figpp1)
