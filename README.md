@@ -15,4 +15,4 @@ Se presentan los datos recuperados de la pagina de [healthdata.gov](https://heal
 ### Alteraciones a los datos
 - Se conservaron solo instancias correspondientes a decesos; reportes de falta de personal medico; total y ocupación hospitalaria general y en área de cuidados intensivos debido a COVID19.
 - Se realizaron agrupaciónes por estado para presentar datos acumulados en el periodo requerido.
-- El diccionario de datos esta disponible desde el siguiente link: [Diccionario](https://github.com/Aurora-MR/COVID19_USA/raw/main/Covid_data/diccionario.csv)
+- El diccionario de datos esta disponible desde el siguiente link: [Diccionario](https://github.com/Aurora-MR/COVID19_USA/blob/main/Covid_data/diccionario.csv)

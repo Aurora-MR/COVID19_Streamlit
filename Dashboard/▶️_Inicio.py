@@ -20,5 +20,6 @@ st.markdown('## Consideraciones')
 st.markdown(
 		"""
         - Este trabajo esta realizado y actualizado según los datos proporcionados por el gobierno de Estados unidos desde la página <a href="https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/g62h-syeh">healthdata.gov</a>.    
-        - Todos los datos se encuentran expresados de forma acumulativa durante el periodo especificado.
+        - Todos los datos se encuentran expresados de forma acumulativa durante el periodo especificado.       
+        - Se puede acceder al diccionario de datos desde el siguienteb enlace: [Diccionario](https://github.com/Aurora-MR/COVID19_USA/blob/main/Covid_data/diccionario.csv)
  		""", unsafe_allow_html=True)
