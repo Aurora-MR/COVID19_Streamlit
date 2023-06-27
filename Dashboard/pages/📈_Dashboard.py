@@ -21,16 +21,16 @@ col3_1, col3_2, col3_3 = st.columns([1, 1, 5])
 col4_1, col4_2, col4_3, col4_4, col4_5, col4_6, col4_7 = st.columns(7)
 col1_1.write('##### Periodo de estudio')
 
-#@st.experimental_memo(ttl=86400)
-#def datar(df):
-#    return df
+@st.experimental_memo(ttl=86400)
+def datar(df):
+   return df
 
-# df_covid19 = datar(df_covid19)
-# df_covid19_occup = datar(df_covid19_occup)
-# df_covid19_icu_covid = datar(df_covid19_icu_covid)
-# df_covid19_rel_deaths_year = datar(df_covid19_rel_deaths_year)
-# df_covid19_confirmed = datar(df_covid19_confirmed)
-# df_covid19_confirmed_state = datar(df_covid19_confirmed_state)
+df_covid19 = datar(df_covid19)
+df_covid19_occup = datar(df_covid19_occup)
+df_covid19_icu_covid = datar(df_covid19_icu_covid)
+df_covid19_rel_deaths_year = datar(df_covid19_rel_deaths_year)
+df_covid19_confirmed = datar(df_covid19_confirmed)
+df_covid19_confirmed_state = datar(df_covid19_confirmed_state)
 
 #Fecha1
 with col2_1:
